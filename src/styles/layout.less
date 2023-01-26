@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: @font_family_1;
+}
+body {
+	background-color: @background_color_1;
+}
+li {
+	list-style: none;
+}
+.container {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media @breakpointTablet {
+       	.container {
+			max-width: 80%;
+		}
+		.products {
+			grid-template-columns: repeat(2, 48.5%);
+			column-gap: 3%;
+		}
+    }
+
+    @media @breakpointMobile {
+        .products {
+			display: block;
+		}
+		.product-item {
+			margin-bottom: 32px;
+		}
+    }
+}
